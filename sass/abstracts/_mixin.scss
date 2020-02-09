@@ -1,0 +1,39 @@
+@mixin suggestion-details{
+    max-height: 35rem;
+    background-color: var(--color-white);
+    z-index: 1000;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 90%;
+    transform: translate(-50%, 0);
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-dark);
+    overflow-y: scroll;
+    cursor: pointer;
+    justify-items: center;
+    visibility: hidden;
+    opacity: 0;
+}
+
+@mixin chat-details($max-height, $width,$left, $overflow, $transform){
+    max-height: $max-height;
+    width: $width;
+    background-color: var(--color-white);
+    z-index: 1000;
+    position: absolute;
+    top: 100%;
+    left: $left;
+    transform: $transform;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-dark);
+    overflow-y: $overflow;
+    cursor: pointer;
+    justify-items: center;
+    visibility: hidden;
+    opacity: 0;
+}
